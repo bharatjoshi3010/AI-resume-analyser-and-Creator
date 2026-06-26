@@ -1,0 +1,15 @@
+its a gen ai project
+where user uploads his resume and targeted job discriptions,
+then this project help us to find the gap in the resume and if user 
+wants it can also genarates a ATS friendly resume for the user.
+
+
+steps:
+    1. We make a server, and then setup user auth API's 
+            (npm init -y)  -nodeJS application initiated
+        for making server 
+            npm i express mongoose dotenv
+    2. We setup database COnfig and created database.js 
+    3. Then we created schema for user model
+    4. and then we creating routes for authentication
+    5. 
