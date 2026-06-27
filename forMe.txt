@@ -17,4 +17,14 @@ steps:
 we need some more packages like -> bcryptjs jsonwebtoken cookie-parser(token to cookie, cookie to read)
                 now we have login and register is ready so now we will work on logout
                     -> for logout we are doing token blacklisting(with mongodb, in high end apps we use reddish)
+        created a getme route and its middleware
+
+
+
+It's time for Frontend -->
+
+        > npm create vite@latest .         (for creating the latest app)
+        
+
+
                     
