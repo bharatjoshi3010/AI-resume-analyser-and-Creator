@@ -12,4 +12,6 @@ steps:
     2. We setup database COnfig and created database.js 
     3. Then we created schema for user model
     4. and then we creating routes for authentication
-    5. 
+    5. then we make controllers 
+        auth.controller.js -> it is for taking care of user register and login
+we need some more packages like -> bcryptjs jsonwebtoken cookie-parser(token to cookie, cookie to read)
