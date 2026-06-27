@@ -15,3 +15,6 @@ steps:
     5. then we make controllers 
         auth.controller.js -> it is for taking care of user register and login
 we need some more packages like -> bcryptjs jsonwebtoken cookie-parser(token to cookie, cookie to read)
+                now we have login and register is ready so now we will work on logout
+                    -> for logout we are doing token blacklisting(with mongodb, in high end apps we use reddish)
+                    
