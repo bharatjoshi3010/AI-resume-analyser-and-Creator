@@ -25,6 +25,12 @@ It's time for Frontend -->
 
         > npm create vite@latest .         (for creating the latest app)
         
+        for importing and using SCSS files
+        > npm i sass
 
+        for navigation we need one more package
+        > npm i react-router
+
+now we setup a login and a register route.....
 
                     
