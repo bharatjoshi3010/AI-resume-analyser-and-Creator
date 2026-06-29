@@ -34,3 +34,25 @@ It's time for Frontend -->
 now we setup a login and a register route.....
 
                     
+
+
+in react we follow 4 layer architecture
+
+1-> UI 
+    => components
+    => pages
+
+2-> Hook      -> for managing state and API layers
+    => hooks
+
+3-> State   -> used for storing the data
+    => auth.context.jsx
+    => ai.context.jsx
+
+4-> API    -> for communication with backend
+=> services
+    => auth.api.js
+
+
+for communication with backend, Frontend needs a package called -> axios
+        > npm i axios
