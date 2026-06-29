@@ -1,15 +1,29 @@
-import React from 'react'
-import "../auth.form.scss"
+import React, { useState } from 'react'
+
 import { useNavigate, Link } from 'react-router'
+import { useAuth } from '../hooks/useAuth'
+import "../auth.form.scss"
 
 const Login = () => {
+
+    const { loading, handleLogin} = useAuth()
+
+    //it is called two way binding
+    const [email,setEmail] = useState("")
+    const [password, setPassword] = useState("")
 
     const navigate = useNavigate()
 
 
-    const handleSubmit = (e) => {          //prevent reload when we click on the submit button of form
+    const handleSubmit = async (e) => {          //prevent reload when we click on the submit button of form
         e.preventDefault()
+        handleLogin({email, password})
     }
+
+    if(loading){
+        return(<main><h1>Loading...</h1></main>)
+    }
+    
 
   return (
     <main>
@@ -20,11 +34,15 @@ const Login = () => {
 
                 <div className="input-group">
                     <label htmlFor="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder='Enter email address' />
+                    <input
+                        onChange={(e) => {setEmail(e.target.value) }} 
+                        type="email" id="email" name="email" placeholder='Enter email address' />
                 </div>
                 <div className="input-group">
                     <label htmlFor="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder='Enter your password' />
+                    <input 
+                        onChange={(e)=>{setPassword(e.target.value)}}
+                        type="password" id="password" name="password" placeholder='Enter your password' />
                 </div>
 
                 <button className='button primary-button'>Login</button>
