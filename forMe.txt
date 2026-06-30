@@ -46,7 +46,7 @@ in react we follow 4 layer architecture
     => hooks
 
 3-> State   -> used for storing the data
-    => auth.context.jsx
+    => auth.context.jsx  (manage user and loading state)
     => ai.context.jsx
 
 4-> API    -> for communication with backend
@@ -56,3 +56,12 @@ in react we follow 4 layer architecture
 
 for communication with backend, Frontend needs a package called -> axios
         > npm i axios
+
+
+        >npm i cors
+
+after it we did cors setup 
+
+perform two way binding in login and registration form 
+
+then we used a useEffect hook in useAuth.js hook, so getMe can work and fetch users data in every refresh
