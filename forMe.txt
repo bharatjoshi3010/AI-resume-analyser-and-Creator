@@ -64,4 +64,22 @@ after it we did cors setup
 
 perform two way binding in login and registration form 
 
-then we used a useEffect hook in useAuth.js hook, so getMe can work and fetch users data in every refresh
+then we used a useEffect hook in useAuth.js hook, so getMe can work and fetch users data in every refresh.
+
+
+
+-> its time to add AI features
+1. at first we make interview model schema
+2. then we install gemini
+    > npm install @google/genai
+
+    you can get google-gemini-api from "google ai studio"
+
+
+    now we check that is our model working or not, 
+
+Now we make a temp.js which consists sample data
+
+    now we need to get structured output
+    > npm i zod
+    > npm i zod-to-json-schema
