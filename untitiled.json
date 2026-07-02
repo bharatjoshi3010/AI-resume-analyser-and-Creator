@@ -1,0 +1,169 @@
+{
+  "matchScore": 35,
+  "technicalQuestions": [
+    {
+      "question": "Given your experience with Node.js and Express, how would you approach designing a scalable API for a service that processes a high volume of real-time data?",
+      "intention": "To assess the candidate's understanding of scalability, performance optimization, and architectural patterns beyond their current stack, and how they apply these concepts to their known technologies.",
+      "answer": "The candidate should discuss concepts like load balancing, caching (e.g., Redis), asynchronous processing with message queues (e.g., Kafka, RabbitMQ), database sharding/replication, connection pooling, and potentially using WebSockets for real-time push. They should mention stateless APIs, efficient data serialization, and monitoring tools."
+    },
+    {
+      "question": "The job requires experience with distributed systems and microservices. Can you explain what a distributed system is, what challenges it presents, and how you would design a system to handle service failures gracefully?",
+      "intention": "To evaluate the candidate's foundational knowledge in distributed systems and fault tolerance, which is crucial for a Senior Software Engineer role, especially given their lack of explicit experience in this area.",
+      "answer": "The candidate should define a distributed system, discuss challenges like network latency, partial failures, data consistency (CAP theorem), concurrency, and debugging. For graceful failure handling, they should cover concepts like circuit breakers, retries with backoff, sagas for distributed transactions, idempotency, service discovery, health checks, and robust logging/monitoring."
+    },
+    {
+      "question": "While your experience is primarily with MongoDB and MySQL, the role involves PostgreSQL and Redis. Can you discuss the differences between SQL and NoSQL databases, and when you would choose one over the other?",
+      "intention": "To understand the candidate's broader database knowledge and their ability to think critically about data storage solutions, even if they lack direct experience with the specific required technologies.",
+      "answer": "The candidate should explain the fundamental differences: SQL (relational, structured schema, ACID properties, vertical scalability) vs. NoSQL (non-relational, flexible schema, BASE properties, horizontal scalability). They should provide use cases for each, e.g., SQL for complex queries and strong consistency; NoSQL for large unstructured data, high write throughput, and rapid schema evolution."
+    },
+    {
+      "question": "Describe a time when you had to optimize the performance of an application. What steps did you take, what tools did you use, and what was the outcome?",
+      "intention": "To assess the candidate's practical problem-solving skills, understanding of performance bottlenecks, and ability to deliver tangible improvements, which is relevant for a senior role despite tech stack differences.",
+      "answer": "The candidate should describe a specific scenario. They should detail their diagnostic process (profilers, logging, monitoring tools), identify the bottleneck (database queries, slow APIs, rendering issues, network latency), outline the solutions implemented (indexing, caching, code refactoring, lazy loading, optimizing algorithms), and quantify the impact of their changes."
+    },
+    {
+      "question": "The job description mentions CI/CD pipelines and DevOps practices. How familiar are you with these concepts, and how have you incorporated them into your previous projects?",
+      "intention": "To gauge the candidate's understanding of modern development and deployment practices, and their potential to adapt to a DevOps-focused environment, even if their direct experience might be limited.",
+      "answer": "The candidate should define CI/CD (Continuous Integration/Continuous Delivery/Deployment) and DevOps (culture, automation, metrics, sharing). They should mention experiences with automated testing, build processes, deployment scripts, version control (Git), and potentially tools like Jenkins, GitLab CI, or GitHub Actions. Emphasize the benefits of these practices."
+    }
+  ],
+  "behavioralQuestions": [
+    {
+      "question": "Tell me about a time you had to lead a technical discussion or mentor a junior developer. What was the context, and what was your approach?",
+      "intention": "To directly assess the candidate's leadership and mentoring skills, which are explicit requirements for a Senior Software Engineer in this role.",
+      "answer": "The candidate should provide a specific situation, outlining their role, the challenge or goal, their actions (facilitating discussion, guidance, knowledge sharing), and the positive outcome or lessons learned."
+    },
+    {
+      "question": "Describe a challenging technical problem you encountered in one of your projects. How did you approach solving it, and what did you learn from the experience?",
+      "intention": "To evaluate the candidate's problem-solving methodology, resilience, and ability to learn from difficulties, which are critical traits for a senior role.",
+      "answer": "The candidate should describe the problem, initial steps, research, collaboration (if any), the iterative process, and the final solution. They should highlight what made it challenging and what new skills or insights they gained."
+    },
+    {
+      "question": "How do you stay updated with new technologies and industry trends, especially those outside of your current primary stack?",
+      "intention": "To understand the candidate's initiative and commitment to continuous learning, which is crucial for a senior role requiring adaptation to technologies like Go, Python, Kubernetes, and AWS.",
+      "answer": "The candidate should mention methods such as blogs, webinars, conferences, online courses (Coursera/Udemy), personal projects, open-source contributions, or following industry leaders."
+    },
+    {
+      "question": "Can you describe a situation where you had to collaborate closely with cross-functional teams (e.g., product, QA, design)? What was your role, and how did you ensure effective communication?",
+      "intention": "To assess collaboration and communication skills required for a Senior Software Engineer role.",
+      "answer": "The candidate should describe a project involving multiple teams, their role, communication methods, expectation management, conflict resolution, and contribution to success."
+    },
+    {
+      "question": "How do you prioritize your work when faced with multiple urgent tasks and deadlines?",
+      "intention": "To evaluate organizational skills, workload management, and decision-making under pressure.",
+      "answer": "The candidate should explain prioritization strategies such as impact vs effort, deadlines, dependencies, and business value, along with tools like Kanban boards or the Eisenhower Matrix."
+    }
+  ],
+  "skillGaps": [
+    {
+      "skill": "5+ years of software development experience (candidate has 3 years)",
+      "severity": "high"
+    },
+    {
+      "skill": "Go programming language",
+      "severity": "high"
+    },
+    {
+      "skill": "Python programming language",
+      "severity": "high"
+    },
+    {
+      "skill": "Kubernetes",
+      "severity": "high"
+    },
+    {
+      "skill": "Docker",
+      "severity": "high"
+    },
+    {
+      "skill": "AWS cloud infrastructure",
+      "severity": "high"
+    },
+    {
+      "skill": "CI/CD pipelines",
+      "severity": "medium"
+    },
+    {
+      "skill": "DevOps practices",
+      "severity": "medium"
+    },
+    {
+      "skill": "Designing distributed systems",
+      "severity": "high"
+    },
+    {
+      "skill": "Microservices architecture",
+      "severity": "high"
+    },
+    {
+      "skill": "System security practices",
+      "severity": "medium"
+    },
+    {
+      "skill": "Team leadership and mentoring experience",
+      "severity": "high"
+    },
+    {
+      "skill": "PostgreSQL",
+      "severity": "medium"
+    },
+    {
+      "skill": "Redis",
+      "severity": "high"
+    },
+    {
+      "skill": "Architecture skills",
+      "severity": "high"
+    }
+  ],
+"preparationPlan": [
+  {
+    "day": 1,
+    "focus": "Go & Python Fundamentals",
+    "tasks": [
+      "Complete an introductory course/tutorial for Go language, focusing on syntax, concurrency (goroutines, channels), and web development basics.",
+      "Complete an introductory course/tutorial for Python, focusing on syntax, data structures, and a basic web framework (e.g., Flask or FastAPI).",
+      "Understand the core philosophies and use cases for both languages in backend development."
+    ]
+  },
+  {
+    "day": 2,
+    "focus": "Containerization (Docker & Kubernetes)",
+    "tasks": [
+      "Learn Docker fundamentals: Dockerfile, images, containers, volumes, networks, Docker Compose.",
+      "Understand the core concepts of Kubernetes: Pods, Deployments, Services, Namespaces, ReplicaSets.",
+      "Explore basic Kubernetes operations: deploying an application, scaling, exposing services.",
+      "Read articles/watch tutorials on container orchestration benefits and challenges."
+    ]
+  },
+  {
+    "day": 3,
+    "focus": "Cloud Computing (AWS) & Distributed Systems",
+    "tasks": [
+      "Familiarize with core AWS services: EC2 (compute), S3 (storage), RDS (managed databases), VPC (networking), Lambda (serverless).",
+      "Understand the basics of cloud-native architecture and its advantages.",
+      "Study fundamental distributed systems concepts: CAP theorem, consistency models, fault tolerance, message queues (e.g., SQS/Kafka concepts)."
+    ]
+  },
+  {
+    "day": 4,
+    "focus": "Microservices & System Design",
+    "tasks": [
+      "Deep dive into microservices architecture: benefits, challenges, common patterns (e.g., API Gateway, Service Discovery, Saga).",
+      "Practice designing a scalable microservices-based system (e.g., an e-commerce platform). Focus on inter-service communication, data consistency, and error handling.",
+      "Review common system design interview questions on scalability, reliability, and availability."
+    ]
+  },
+  {
+    "day": 5,
+    "focus": "CI/CD, Databases & Leadership",
+    "tasks": [
+      "Review CI/CD concepts: Continuous Integration, Continuous Delivery, Continuous Deployment. Understand common tools (e.g., Jenkins, GitLab CI).",
+      "Familiarize with PostgreSQL (SQL syntax, common features) and Redis (caching, pub/sub, data structures) for specific use cases.",
+      "Prepare for behavioral questions focusing on leadership, mentoring, communication, and handling technical challenges, drawing examples from past experiences.",
+      "Reflect on how to articulate existing experience (Node.js/React) in the context of advanced engineering principles relevant to the senior role."
+    ]
+  }
+]
+}
+
