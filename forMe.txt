@@ -82,4 +82,12 @@ Now we make a temp.js which consists sample data
 
     now we need to get structured output
     > npm i zod
-    > npm i zod-to-json-schema
+    > npm i zod-to-json-schema 
+    by this we created the structured output from the AI
+        we create 'ai.services.js'
+        the interview.routes.js and interview.controller.js
+
+now for uploading the pdf we need a package
+    > npm i multer
+for reading the pdf's data we need
+    > npm i pdf-parse
