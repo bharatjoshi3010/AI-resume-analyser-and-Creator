@@ -91,3 +91,9 @@ now for uploading the pdf we need a package
     > npm i multer
 for reading the pdf's data we need
     > npm i pdf-parse
+
+now our API is working fine 
+
+now we will make the frontend 
+and make a interview features -> we will make pages, services and styles
+and change the protected homepage heading to the home.jsx inside pages
