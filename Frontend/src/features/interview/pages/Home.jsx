@@ -1,12 +1,20 @@
 import React, { useState, useRef } from "react";
 import "../styles/home.scss";
+import { useInterview } from "../hooks/useinterview.js";
+import { useNavigate } from "react-router";
+
 
 const Home = () => {
+
+    const {loading, generateReport} = useInterview()
+
     const [jobDescription, setJobDescription] = useState("");
     const [selfDescription, setSelfDescription] = useState("");
     const [resumeFile, setResumeFile] = useState(null);
     const [isDragActive, setIsDragActive] = useState(false);
-    const fileInputRef = useRef(null);
+    const fileInputRef = useRef(null);    //for resume pdf handling
+
+    const navigate = useNavigate()
 
     const handleJobDescriptionChange = (e) => {
         if (e.target.value.length <= 5000) {
@@ -66,13 +74,26 @@ const Home = () => {
         }
     };
 
-    const handleGenerate = () => {
+    const handleGenerate = async() => {
+        
+        const resumeFile1 = fileInputRef.current.files[0]
+        const data = await generateReport({ jobDescription, selfDescription, resumeFile1})
+        navigate(`/interview/${data._id}`)
         console.log("Generating strategy with:", {
             jobDescription,
             selfDescription,
             resumeFile
         });
     };
+
+
+    if(loading){
+        return(
+            <main className="loading-screen">
+                <h1>Loading your interview plan...</h1>
+            </main>
+        )
+    }
 
     return (
         <main className="home">
