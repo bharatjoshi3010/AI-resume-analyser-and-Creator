@@ -1,15 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/interview.scss";
 import { useInterview } from "../hooks/useinterview.js";
+import { useNavigate, useParams } from 'react-router';
 
 
 const Interview = () => {
 
-    const { report } = useInterview()
+    const { report, getReportById, loading} = useInterview()
 
   const [activeTab, setActiveTab] = useState("technical");
   const [checkedTasks, setCheckedTasks] = useState({});
   const [expandedQuestion, setExpandedQuestion] = useState(null);
+    const {interviewId} = useParams()
+
+  useEffect(() => {
+    if(interviewId){
+        getReportById(interviewId)
+    }
+  },[interviewId])
+
+      if(loading || !report){
+    return (
+        <main className="loading-screen">
+            <h1>Loading your interview plan ... </h1>
+        </main>
+    )
+  }
 
   const toggleTask = (dayIndex, taskIndex) => {
     const key = `${dayIndex}-${taskIndex}`;
@@ -23,11 +39,15 @@ const Interview = () => {
     setExpandedQuestion(prev => (prev === index ? null : index));
   };
 
+
+
   // Match score circular calculations
   const radius = 45;
   const strokeWidth = 8;
   const circumference = 2 * Math.PI * radius;
   const strokeDashoffset = circumference - (report.matchScore / 100) * circumference;
+
+
 
   return (
     <div className="interview-page">

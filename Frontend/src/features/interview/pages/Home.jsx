@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 
 const Home = () => {
 
-    const {loading, generateReport} = useInterview()
+    const { loading, generateReport, reports } = useInterview()
 
     const [jobDescription, setJobDescription] = useState("");
     const [selfDescription, setSelfDescription] = useState("");
@@ -74,10 +74,10 @@ const Home = () => {
         }
     };
 
-    const handleGenerate = async() => {
-        
+    const handleGenerate = async () => {
+
         const resumeFile1 = fileInputRef.current.files[0]
-        const data = await generateReport({ jobDescription, selfDescription, resumeFile1})
+        const data = await generateReport({ jobDescription, selfDescription, resumeFile1 })
         navigate(`/interview/${data._id}`)
         console.log("Generating strategy with:", {
             jobDescription,
@@ -87,8 +87,8 @@ const Home = () => {
     };
 
 
-    if(loading){
-        return(
+    if (loading) {
+        return (
             <main className="loading-screen">
                 <h1>Loading your interview plan...</h1>
             </main>
@@ -247,6 +247,26 @@ const Home = () => {
                     </button>
                 </div>
             </div>
+
+            {/* Recent Reports list*/}
+            {
+                reports.length > 0 && (
+                    <section className="recent-reports">
+                        <h2>My recent interview plans</h2>
+                        <ul className="reports-lists">
+                            {reports.map(report => (
+                                <li key={report._id} className="report-item" onClick={() => navigate(`/interview/${report._id}`)}>
+                                    <h3>{report.title || 'Untitled Position'}</h3>
+                                    <p className="report-meta">Generated on {new Date(report.createdAt).toLocaleDateString()}</p>
+
+                                    <p className={`match-score ${report.matchScore >= 80 ? 'score--high' : report.matchScore >= 60 ? 'score--mid' : 'score--low'}`}>Match Score: {report.matchScore}%</p>
+                                </li>
+                            ))}
+                        </ul>
+
+                    </section>
+                )
+            }
         </main>
     );
 };
