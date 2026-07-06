@@ -328,6 +328,7 @@ const Interview = () => {
 
         {/* Right Panel: Skill Gaps & Match Score */}
         <aside className="sidebar-right">
+          <div className="sidebar-right-inner">
           <div className="analysis-widget match-score-widget">
             <h3 className="widget-title">Compatibility</h3>
             <div className="match-score-radial">
@@ -372,6 +373,7 @@ const Interview = () => {
                 </div>
               ))}
             </div>
+          </div>
           </div>
         </aside>
 

@@ -897,19 +897,19 @@ $shadow-glow:  0 0 48px rgba(244, 63, 94, 0.12);
 // RIGHT SIDEBAR
 // ============================================================
 .sidebar-right {
-    @extend %panel-scroll;
     width: 284px;
+    flex: 0 0 284px;
     flex-shrink: 0;
     min-height: 0;
+    min-width: 0;
+    align-self: stretch;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-    padding: 1.75rem 1.25rem;
     background: rgba($surface-0, 0.70);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border-left: 1px solid $border-1;
-    overflow-y: auto;
+    overflow: hidden;
     position: relative;
 
     &::before {
@@ -918,33 +918,53 @@ $shadow-glow:  0 0 48px rgba(244, 63, 94, 0.12);
         top: 0; left: 0; right: 0;
         height: 1px;
         background: linear-gradient(90deg, transparent, $rose-border, transparent);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .sidebar-right-inner {
+        @extend %panel-scroll;
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.75rem 1.25rem;
+        padding-bottom: max(1.75rem, 8vh);
     }
 
     @media (max-width: 1024px) {
         width: 100%;
-        height: auto;
-        max-height: none;
+        flex: none;
         min-height: auto;
-        overflow-y: visible;
+        overflow: visible;
         border-left: none;
         border-top: 1px solid $border-1;
         background: rgba($surface-0, 0.92);
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 1.25rem;
-        gap: 1rem;
+
+        .sidebar-right-inner {
+            flex: none;
+            overflow-y: visible;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 1.25rem;
+            gap: 1rem;
+        }
     }
 }
 
 // Widget base
-.analysis-widget {
-    background: $glass-1;
-    border: 1px solid $border-1;
-    border-radius: $r-lg;
-    padding: 1.25rem;
-    transition: border-color 0.25s $ease, box-shadow 0.25s $ease;
-    position: relative;
-    overflow: hidden;
+    .analysis-widget {
+        background: $glass-1;
+        border: 1px solid $border-1;
+        border-radius: $r-lg;
+        padding: 1.25rem;
+        transition: border-color 0.25s $ease, box-shadow 0.25s $ease;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
 
     &::before {
         content: '';
