@@ -97,3 +97,16 @@ now our API is working fine
 now we will make the frontend 
 and make a interview features -> we will make pages, services and styles
 and change the protected homepage heading to the home.jsx inside pages
+
+then we build the ui fo rhome page , interview .jsx page 
+and we make the four layer react architecture
+for both ui
+
+now we are adding one more feature so AI will make the required resume...
+
+Puppeter -> its help to enable browsers feature in server side environment
+and in browser we have a option of create pdf from html,
+
+now we will genrate html from ai 
+then we give this html to our puppeter AI
+and this package will help us to make pdf
