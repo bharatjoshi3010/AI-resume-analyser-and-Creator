@@ -6,7 +6,7 @@ import { useNavigate, useParams } from 'react-router';
 
 const Interview = () => {
 
-    const { report, getReportById, loading} = useInterview()
+    const { report, getReportById, loading, getResumePdf} = useInterview()
 
   const [activeTab, setActiveTab] = useState("technical");
   const contentRef = useRef(null);
@@ -118,10 +118,12 @@ const Interview = () => {
           </nav>
 
           <div className="sidebar-footer">
-            <div className="session-info">
-              <span className="session-dot"></span>
-              <span>Session active</span>
-            </div>
+            <button 
+            onClick={()=>{getResumePdf(interviewId)}}
+            className="button primary-button">
+              Download Resume
+            </button>
+            
           </div>
         </aside>
 
