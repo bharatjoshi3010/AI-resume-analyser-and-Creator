@@ -397,6 +397,10 @@ $shadow-glow:  0 0 48px rgba(244, 63, 94, 0.12);
 .sidebar-footer {
     padding: 1.125rem;
     border-top: 1px solid $border-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
 
     .session-info {
         display: flex;
